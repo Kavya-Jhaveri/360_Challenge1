@@ -70,9 +70,7 @@ if __name__ == "__main__":
             #### CONTROL INPUTS to the robot here #########
             fx = (axis[5]+1) / 2 - (axis[2]+1) / 2  # Forward with the triggers
             # fx = min(max((axis[5] + 1) / 2 - (axis[2] + 1) / 2, 0), 1)  # Constrain fx between 0 and 1
-            # fx = axis[2] - axis[5]
-            # if (fx < 0):
-            #     fx = fx * .3
+           
             # fz = -axis[0]  # Vertical left joystick
             if abs(axis[0]) < .15:
                 axis[0] = 0
