@@ -91,8 +91,7 @@ if PDterms.yawEn:
     yaw_error = max(-math.pi / 3, min(yaw_error, math.pi / 3))
 
     yaw_integral += yaw_error * (dt / 1000000.0) * PDterms.kiz
-    yaw_control = (tz - yaw)*PDterms.kpyaw - (yawrate)*PDterms.kdyaw + yaw_integral;
-  }
+    yaw_control = yaw_error*PDterms.kpyaw - (yawrate)*PDterms.kdyaw + yaw_integral
     # yaw_control = (tz - yaw) * PDterms['kpyaw'] - yawrate * PDterms['kdyaw'] + yaw_integral
     # print("yaw_error: ", yaw_error)
     # print("yaw_integral: ", yaw_integral)
